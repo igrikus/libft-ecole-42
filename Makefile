@@ -18,7 +18,7 @@ CFLAGS  = -Wall -Werror -Wextra
 all:    ${NAME}
 %.o : %.c   libft.h
 	gcc ${CFLAGS} -c $< -o $@
-${NAME}:    ${OBJS}
+$(NAME): ${OBJS}
 	ar rcs ${NAME} $?
 bonus:
 	@make OBJS="${OBJS_B}" all
